@@ -1,0 +1,16 @@
+3.	def sum_of_distinct_squares(nums):
+    result = 0
+    for i in range(len(nums)):
+        for j in range(i, len(nums)):
+            distinct_values = len(set(nums[i:j+1]))
+            result += distinct_values ** 2
+    return result
+
+# Example 1
+nums1 = [1, 2, 1]
+print(sum_of_distinct_squares(nums1))  # Output: 15
+
+# Example 2
+nums2 = [1, 1]
+print(sum_of_distinct_squares(nums2))  # Output: 3
+
